@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(){
-        
+        int i =1,n=1;
+        int guess,ran;
+        srand(time(NULL));
+        ran = rand()%101;
+        while(n==1){
+                printf("Guess the number between 0 and 100: ");
+                scanf("%d",&guess);
+                if(guess > ran){
+                       printf("Try a smaller number\n");
+                       i++;
+                }else if(guess < ran){
+                       printf("Try a Bigger number\n");
+                       i++;
+                }else{
+                       printf("you have guessed the number in %d turns",n);
+                       return 0;
+                }
+        }
+
 }
